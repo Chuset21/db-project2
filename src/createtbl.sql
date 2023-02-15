@@ -167,6 +167,3 @@ create table Selected
     foreign key (number) references Seat,
     foreign key (pid) references Purchase
 );
-
-
-
