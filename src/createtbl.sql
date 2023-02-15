@@ -96,7 +96,7 @@ create table Seat
     number integer     not null,
     name   varchar(30) not null,
     primary key (name, number),
-    foreign key (name) references Match,
+    foreign key (name) references Stadium,
     constraint seat_check check (number >= 0)
 );
 
