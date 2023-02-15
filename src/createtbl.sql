@@ -12,7 +12,7 @@ create table Match
     date         date                                                               not null,
     time         time                                                               not null,
     primary key (match_number),
-    constraint check_match check ((length IS NULL or length >= 0) and
+    constraint match_check check ((length IS NULL or length >= 0) and
                                   (round = 'final' or round = 'third place' or round = 'semifinals' or
                                    round = 'quarterfinals' or round = 'round of 16' or
                                    round = 'group stage'))
@@ -25,7 +25,7 @@ create table Team
     t_group              char(1)       not null,
     country              varchar(60)   not null,
     primary key (country),
-    constraint check_team check (t_group = 'A' or t_group = 'B' or t_group = 'C' or t_group = 'D' or t_group = 'E' or
+    constraint team_check check (t_group = 'A' or t_group = 'B' or t_group = 'C' or t_group = 'D' or t_group = 'E' or
                                  t_group = 'F' or t_group = 'G' or t_group = 'H')
 );
 
@@ -68,7 +68,7 @@ create table Stadium
     name     varchar(30)  not null,
     capacity integer      not null,
     primary key (name),
-    constraint referee_check check (capacity >= 1)
+    constraint stadium_check check (capacity >= 1)
 );
 
 create table Goal
@@ -79,7 +79,37 @@ create table Goal
     match_number integer not null,
     primary key (match_number, goal_number),
     foreign key (match_number) references Match,
-    constraint referee_check check (goal_number >= 1 and minute >= 0)
+    constraint goal_check check (goal_number >= 1 and minute >= 0)
+);
+
+create table Seat
+(
+    number integer     not null,
+    name   varchar(30) not null,
+    primary key (name, number),
+    foreign key (name) references Match,
+    constraint seat_check check (number >= 0)
+);
+
+create table Client
+(
+    email    varchar(100) not null,
+    name     varchar(30)  not null,
+    address  varchar(30)  not null,
+    password varchar(20)  not null,
+    primary key (email),
+    constraint client_check check (length(password) >= 10)
+);
+
+create table Purchase
+(
+    total_price integer                                                            not null,
+    date        date                                                               not null,
+    credit_card varchar(16)                                                        not null, -- no way to check that it's all numbers
+    pid         integer GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) not null,
+    email       varchar(100)                                                       not null,
+    primary key (email, pid),
+    foreign key (email) references Client
 );
 
 
