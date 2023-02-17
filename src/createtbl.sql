@@ -80,14 +80,15 @@ create table Referee
 
 create table Goal
 (
-    in_penalties boolean not null,
-    minute       integer not null,
-    number       integer not null, -- not auto generated because it shows the goal number in a specific match
-    match_number integer not null,
-    pid          integer not null,
+    in_penalties boolean     not null,
+    minute       integer     not null,
+    number       integer     not null, -- not auto generated because it shows the goal number in a specific match
+    match_number integer     not null,
+    pid          integer     not null,
+    country      varchar(60) not null,
     primary key (match_number, number),
     foreign key (match_number) references Match,
-    foreign key (pid) references Player,
+    foreign key (country, pid) references Player,
     constraint goal_check check (number >= 1 and minute >= 0)
 );
 
@@ -135,35 +136,41 @@ create table Participation
 create table PlayIn
 (
     pid               integer     not null,
+    country           varchar(60) not null,
     match_number      integer     not null,
     yellow_cards      integer     not null,
-    received_red_card boolean     not null,
+    received_red_card smallint    not null,
     detailed_position varchar(20) not null,
     minute_entered    integer     not null,
     minute_exited     integer     not null,
-    primary key (pid, match_number),
-    foreign key (pid) references Player,
+    primary key (country, pid, match_number),
+    foreign key (country, pid) references Player,
     foreign key (match_number) references Match,
-    constraint play_in_check check (minute_entered <= minute_exited and (0 = yellow_cards or yellow_cards = 1 or
-                                                                         (yellow_cards = 2 and received_red_card = true)))
+    constraint play_in_check check (minute_entered <= minute_exited and
+                                    (received_red_card = 0 or received_red_card = 1) and
+                                    (0 = yellow_cards or yellow_cards = 1 or
+                                     (yellow_cards = 2 and received_red_card = 1)))
 );
 
 create table Price
 (
-    number       integer not null,
-    match_number integer not null,
-    price        integer not null, -- we store it in cents
-    primary key (number, match_number),
-    foreign key (number) references Seat,
+    number       integer     not null,
+    name         varchar(30) not null,
+    match_number integer     not null,
+    price        integer     not null, -- we store it in cents
+    primary key (name, number, match_number),
+    foreign key (name, number) references Seat,
     foreign key (match_number) references Match,
     constraint price_check check (price >= 0)
 );
 
 create table Selected
 (
-    number integer not null,
-    pid    integer not null,
-    primary key (number, pid),
-    foreign key (number) references Seat,
-    foreign key (pid) references Purchase
+    number integer      not null,
+    name   varchar(30)  not null,
+    pid    integer      not null,
+    email  varchar(100) not null,
+    primary key (name, number, email, pid),
+    foreign key (name, number) references Seat,
+    foreign key (email, pid) references Purchase
 );
