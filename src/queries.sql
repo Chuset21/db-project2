@@ -10,7 +10,7 @@ from STADIUM s
 where p.NAME = 'Christine Sinclair';
 
 -- Write a SQL query that lists the name, shirt number and country of all players that have played in all
--- matches of their teams.
+-- matches of their teams. TODO
 
 select distinct p.NAME, p.NUMBER, p.COUNTRY
 from PLAYER p
