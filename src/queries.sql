@@ -1,7 +1,7 @@
 -- Write a SQL query that lists all the stadium names and their locations and the match date of matches
 -- in which player Christine Sinclair has played and scored at least one goal.
 
-select s.NAME, s.LOCATION, m.DATE
+select distinct s.NAME, s.LOCATION, m.DATE
 from STADIUM s
          join MATCH m on s.NAME = m.NAME
          join PLAYIN x on m.MATCH_NUMBER = x.MATCH_NUMBER
@@ -24,3 +24,11 @@ having count(p.NAME) = (select count(*) c
                                  join TEAM t2 on t2.COUNTRY = m2.COUNTRY1 or t2.COUNTRY = m2.COUNTRY2
                         group by t2.COUNTRY)
 order by COUNTRY;
+
+-- Write a SQL query that lists for each team, the country, the number of matches they have played and the
+-- total number of goals they have scored during normal play (not counting the penalty kicks in case of a
+-- tie). Note that for this query, it might be very useful to have extra attributes attached to some relations
+-- (which will depend on your schema) that somehow keep track how many such goals each team scored in
+-- a match. Feel free to add such extra attributes to your schema if you find them useful. But you can also
+-- try to extract the information through the detailed information you store for each goal, but that might
+-- be quite complex.
