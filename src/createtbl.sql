@@ -148,7 +148,7 @@ create table PlayIn
     foreign key (match_number) references Match,
     constraint play_in_check check (minute_entered <= minute_exited and
                                     (0 = yellow_cards or yellow_cards = 1 or
-                                     (yellow_cards = 2 and received_red_card = TRUE)))
+                                     (yellow_cards = 2 and received_red_card)))
 );
 
 create table Price
