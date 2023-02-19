@@ -32,3 +32,18 @@ order by COUNTRY;
 -- a match. Feel free to add such extra attributes to your schema if you find them useful. But you can also
 -- try to extract the information through the detailed information you store for each goal, but that might
 -- be quite complex.
+
+select t.COUNTRY, x.number_of_matches, y.number_of_goals
+from TEAM t
+         join (select t.COUNTRY, count(*) number_of_matches
+               from TEAM t
+                        join MATCH m on t.COUNTRY = m.COUNTRY1 or t.COUNTRY = m.COUNTRY2
+               where m.LENGTH is not null
+               group by COUNTRY) x on t.COUNTRY = x.COUNTRY
+         join
+     (select t.COUNTRY, count(*) number_of_goals
+      from TEAM t
+               join GOAL G on t.COUNTRY = g.COUNTRY
+      where not IN_PENALTIES
+      group by t.COUNTRY) y on t.COUNTRY = y.COUNTRY
+order by COUNTRY;
