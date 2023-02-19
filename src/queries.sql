@@ -49,7 +49,8 @@ from TEAM t
 order by COUNTRY;
 
 -- Query (d) TODO
--- Create an interesting SQL query that extracts some information from tables that refers to purchasing tickets, e.g., some summary information about tickets sold for a particular match, information how manytickets
+-- Create an interesting SQL query that extracts some information from tables that refers to purchasing tickets,
+-- e.g., some summary information about tickets sold for a particular match, information how many tickets
 -- where sold for a match / each match and whether the stadium was sold out, or anything else that might
 -- be interesting. The query should not only be a simple query on a single table with only basic selections
 -- and projections.
