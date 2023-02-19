@@ -31,15 +31,15 @@ order by COUNTRY;
 -- try to extract the information through the detailed information you store for each goal, but that might
 -- be quite complex.
 
-select t.COUNTRY, x.number_of_matches, y.number_of_goals
+select t.COUNTRY, x.number_of_matches, coalesce(y.g, 0) number_of_goals
 from TEAM t
          join (select t.COUNTRY, count(*) number_of_matches
                from TEAM t
                         join MATCH m on t.COUNTRY = m.COUNTRY1 or t.COUNTRY = m.COUNTRY2
                where m.LENGTH is not null
                group by COUNTRY) x on t.COUNTRY = x.COUNTRY
-         join
-     (select t.COUNTRY, count(*) number_of_goals
+         left join
+     (select t.COUNTRY, count(*) g
       from TEAM t
                join GOAL G on t.COUNTRY = g.COUNTRY
       where MINUTE is not null
