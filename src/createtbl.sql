@@ -139,7 +139,7 @@ create table PlayIn
     country           varchar(60) not null,
     match_number      integer     not null,
     yellow_cards      integer     not null,
-    received_red_card smallint    not null,
+    received_red_card boolean     not null,
     detailed_position varchar(20) not null,
     minute_entered    integer     not null,
     minute_exited     integer     not null,
@@ -147,9 +147,8 @@ create table PlayIn
     foreign key (country, pid) references Player,
     foreign key (match_number) references Match,
     constraint play_in_check check (minute_entered <= minute_exited and
-                                    (received_red_card = 0 or received_red_card = 1) and
                                     (0 = yellow_cards or yellow_cards = 1 or
-                                     (yellow_cards = 2 and received_red_card = 1)))
+                                     (yellow_cards = 2 and received_red_card = TRUE)))
 );
 
 create table Price
