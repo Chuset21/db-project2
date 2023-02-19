@@ -10,18 +10,16 @@ from STADIUM s
 where p.NAME = 'Christine Sinclair';
 
 -- Write a SQL query that lists the name, shirt number and country of all players that have played in all
--- matches of their teams. TODO
+-- matches of their teams.
 
-select distinct p.NAME, p.NUMBER, p.COUNTRY
+select p.NAME, p.NUMBER, p.COUNTRY
 from PLAYER p
          join PLAYIN x on p.COUNTRY = x.COUNTRY and p.PID = x.PID
-         join MATCH m on x.MATCH_NUMBER = m.MATCH_NUMBER
-         join TEAM t on m.COUNTRY1 = t.COUNTRY or m.COUNTRY2 = t.COUNTRY
-where m.LENGTH is not null
-group by p.NAME, p.NUMBER, p.COUNTRY
-having count(p.NAME) = (select count(*) c
+group by p.NAME, p.NUMBER, p.COUNTRY, p.PID
+having count(p.PID) = (select count(t2.COUNTRY) c
                         from MATCH m2
                                  join TEAM t2 on t2.COUNTRY = m2.COUNTRY1 or t2.COUNTRY = m2.COUNTRY2
+                        where p.COUNTRY = t2.COUNTRY and m2.LENGTH is not null
                         group by t2.COUNTRY)
 order by COUNTRY;
 
