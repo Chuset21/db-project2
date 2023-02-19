@@ -116,11 +116,11 @@ values (92, 'Group stage', '2023-07-20', '19:00:00', 'Eden Park', 'Canada', 'Spa
      , (126, 'Group stage', '2023-07-28', '18:30:00', 'Brisbane Stadium', 'England', 'Scotland')
      , (92, 'Group stage', '2023-07-29', '20:30:00', 'Waikatao Stadium', 'Turkey', 'Nigeria')
      , (94, 'Group stage', '2023-07-30', '14:00:00', 'Melbourne Rectangular Stadium', 'Netherlands', 'Switzerland')
-     , (90, 'Round of 16', '2023-08-05', '17:00:00', 'Melbourne Rectangular Stadium', 'Spain', 'Germany')
+     , (90, 'Round of 16', '2023-08-05', '17:00:00', 'Melbourne Rectangular Stadium', 'Canada', 'Germany')
      , (90, 'Round of 16', '2023-08-06', '17:30:00', 'Perth Rectangular Stadium', 'Argentina', 'Japan')
      , (121, 'Round of 16', '2023-08-06', '19:00:00', 'Stadium Australia', 'Ireland', 'England')
      , (125, 'Round of 16', '2023-08-06', '20:00:00', 'Waikatao Stadium', 'Turkey', 'Netherlands')
-     , (null, 'Quarterfinals', '2023-08-11', '14:00:00', 'Sydney Football Stadium', 'Spain', 'Japan')
+     , (95, 'Quarterfinals', '2023-08-11', '14:00:00', 'Sydney Football Stadium', 'Canada', 'Japan')
      , (null, 'Quarterfinals', '2023-08-12', '16:30:00', 'Eden Park', 'Ireland', 'Netherlands');
 
 insert into PARTICIPATION (RID, MATCH_NUMBER, ROLE_OF_REF)
@@ -160,3 +160,60 @@ values (1, 1, 'Head')
      , (9, 13, 'Assistant')
      , (9, 14, 'Head')
      , (4, 14, 'Assistant');
+
+insert into GOAL (MINUTE, NUMBER, MATCH_NUMBER, PID, COUNTRY)
+values (15, 1, 1, 3, 'Canada')
+     , (50, 2, 1, 10, 'Spain')
+     , (68, 3, 1, 3, 'Canada')
+
+     , (43, 1, 2, 14, 'Brazil')
+     , (45, 2, 2, 15, 'Germany')
+     , (91, 3, 2, 16, 'Germany')
+
+     , (null, 1, 3, 18, 'Argentina')
+     , (null, 2, 3, 20, 'US')
+     , (null, 3, 3, 17, 'Argentina')
+     , (null, 4, 3, 18, 'Argentina')
+
+     , (34, 1, 4, 21, 'Japan')
+
+     , (87, 1, 5, 27, 'Ireland')
+
+     , (23, 1, 6, 30, 'England')
+     , (74, 2, 6, 30, 'England')
+     , (77, 3, 6, 31, 'Scotland')
+     , (89, 4, 6, 31, 'Scotland')
+     , (null, 5, 6, 31, 'Scotland')
+     , (null, 6, 6, 30, 'England')
+     , (null, 7, 6, 29, 'England')
+     , (null, 8, 6, 30, 'England')
+
+     , (89, 1, 7, 34, 'Turkey')
+
+     , (5, 1, 8, 37, 'Netherlands')
+     , (19, 2, 8, 38, 'Netherlands')
+     , (47, 3, 8, 37, 'Netherlands')
+     , (86, 4, 8, 37, 'Netherlands')
+
+     , (70, 1, 9, 7, 'Canada')
+
+     , (62, 1, 10, 21, 'Japan')
+
+     , (11, 1, 11, 27, 'Ireland')
+     , (33, 2, 11, 30, 'England')
+     , (null, 3, 11, 30, 'England')
+     , (null, 4, 11, 27, 'Ireland')
+     , (null, 5, 11, 29, 'England')
+     , (null, 6, 11, 28, 'Ireland')
+     , (null, 7, 11, 30, 'England')
+     , (null, 8, 11, 27, 'Ireland')
+     , (null, 9, 11, 29, 'England')
+     , (null, 10, 11, 28, 'Ireland')
+     , (null, 11, 11, 30, 'England')
+     , (null, 12, 11, 27, 'Ireland')
+     , (null, 13, 11, 28, 'Ireland')
+
+     , (null, 1, 12, 37, 'Netherlands')
+
+     , (44, 1, 13, 2, 'Canada')
+     , (55, 2, 13, 1, 'Canada');
