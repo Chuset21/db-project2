@@ -40,9 +40,9 @@ create table Match
     foreign key (country1) references Team (country),
     foreign key (country2) references Team (country),
     constraint match_check check ((length IS NULL or length >= 0) and
-                                  (round = 'final' or round = 'third place' or round = 'semifinals' or
-                                   round = 'quarterfinals' or round = 'round of 16' or
-                                   round = 'group stage'))
+                                  (round = 'Final' or round = 'Third place' or round = 'Semifinals' or
+                                   round = 'Quarterfinals' or round = 'Round of 16' or
+                                   round = 'Group stage'))
 );
 
 create table Coach
@@ -65,7 +65,9 @@ create table Player
     pid      integer GENERATED ALWAYS AS IDENTITY (START WITH 1 INCREMENT BY 1) not null,
     country  varchar(60)                                                        not null,
     primary key (country, pid),
-    foreign key (country) references Team
+    foreign key (country) references Team,
+    constraint player_check check (position = 'Forward' or position = 'Midfielder' or position = 'Defender' or
+                                   position = 'Goalkeeper')
 );
 
 create table Referee
