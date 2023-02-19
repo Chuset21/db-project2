@@ -86,3 +86,14 @@ values ('Forward', 'Jordyn Huitema', '2001-05-08', '9', 'Canada')
      , ('Forward', 'Vivianne Miedema', '1996-06-15', '9', 'Netherlands')
      , ('Midfielder', 'Lia Wälti', '1993-04-19', '13', 'Switzerland')
      , ('Forward', 'Alisha Lehmann', '1999-01-21', '23', 'Switzerland');
+
+insert into REFEREE (YEARS_EXPERIENCE, NAME, COUNTRY)
+values (14, 'Stéphanie Frappart', 'France')
+     , (4, 'Yoshimi Yamashita', 'Japan')
+     , (11, 'Salima Mukansanga', 'Rwanda')
+     , (5, 'Kathryn Nesbitt', 'US')
+     , (5, 'Katja Koroleva', 'US')
+     , (21, 'Kateryna Monzul', 'Ukraine')
+     , (3, 'Kari Seitz', 'US')
+     , (13, 'Anna-Marie Keighley', 'New Zealand')
+     , (12, 'Kate Jacewicz', 'Australia');
