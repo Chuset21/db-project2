@@ -47,3 +47,16 @@ from TEAM t
       where not IN_PENALTIES
       group by t.COUNTRY) y on t.COUNTRY = y.COUNTRY
 order by COUNTRY;
+
+-- Query (d) TODO
+-- Create an interesting SQL query that extracts some information from tables that refers to purchasing tickets, e.g., some summary information about tickets sold for a particular match, information how manytickets
+-- where sold for a match / each match and whether the stadium was sold out, or anything else that might
+-- be interesting. The query should not only be a simple query on a single table with only basic selections
+-- and projections.
+
+
+
+-- Query (e) TODO
+-- Create a further SQL query that is of interest for this soccer world cup database. Maybe it uses some tables
+-- that are not used in any of the other queries, or performs some conditions on the date/time attributes of
+-- the schema or any other attributes that have not been used in one of the other queries.
