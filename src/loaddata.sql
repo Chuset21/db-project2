@@ -228,7 +228,7 @@ values (3, 'Canada', 1, 0, false, 'Center forward', 0, 92)
      , (6, 'Canada', 1, 0, false, 'Center back', 0, 92)
      , (7, 'Canada', 1, 0, false, 'Full back', 0, 92)
      , (8, 'Canada', 1, 0, false, 'Goalkeeper', 0, 92)
-     , (10, 'Spain', 1, 0, true, 'Goalkeeper', 0, 2)
+     , (10, 'Spain', 1, 0, true, 'Goalkeeper', 0, 51)
      , (11, 'Spain', 1, 1, true, 'Center forward', 0, 3)
      , (12, 'Spain', 1, 2, true, 'Center mid', 0, 5)
 
