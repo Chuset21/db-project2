@@ -82,8 +82,7 @@ create table Referee
 
 create table Goal
 (
-    in_penalties boolean     not null,
-    minute       integer     not null,
+    minute       integer,              -- can be null if it's scored during penalties
     number       integer     not null, -- not auto generated because it shows the goal number in a specific match
     match_number integer     not null,
     pid          integer     not null,
@@ -91,7 +90,7 @@ create table Goal
     primary key (match_number, number),
     foreign key (match_number) references Match,
     foreign key (country, pid) references Player,
-    constraint goal_check check (number >= 1 and minute >= 0)
+    constraint goal_check check (number >= 1 and (minute >= 0 or not minute is null))
 );
 
 create table Seat

@@ -44,7 +44,7 @@ from TEAM t
      (select t.COUNTRY, count(*) number_of_goals
       from TEAM t
                join GOAL G on t.COUNTRY = g.COUNTRY
-      where not IN_PENALTIES
+      where MINUTE is not null
       group by t.COUNTRY) y on t.COUNTRY = y.COUNTRY
 order by COUNTRY;
 
@@ -54,7 +54,6 @@ order by COUNTRY;
 -- where sold for a match / each match and whether the stadium was sold out, or anything else that might
 -- be interesting. The query should not only be a simple query on a single table with only basic selections
 -- and projections.
-
 
 
 -- Query (e) TODO
