@@ -97,3 +97,12 @@ values (14, 'Stéphanie Frappart', 'France')
      , (3, 'Kari Seitz', 'US')
      , (13, 'Anna-Marie Keighley', 'New Zealand')
      , (12, 'Kate Jacewicz', 'Australia');
+
+insert into STADIUM (LOCATION, NAME, CAPACITY)
+values ('Auckland Tamaki Makaurau, NZL', 'Eden Park', 50000)
+     , ('Sydney Gadigal, AUS', 'Sydney Football Stadium', 45500)
+     , ('Melbourne Naarm, AUS', 'Melbourne Rectangular Stadium', 30000)
+     , ('Hamilton Kirikiriroa, NZL', 'Waikatao Stadium', 25800)
+     , ('Brisbane Meaanjin, AUS', 'Brisbane Stadium', 52500)
+     , ('Perth Boorloo, AUS', 'Perth Rectangular Stadium', 20500)
+     , ('Sydney Gadigal, AUS', 'Stadium Australia', 83500);
