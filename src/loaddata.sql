@@ -217,3 +217,73 @@ values (15, 1, 1, 3, 'Canada')
 
      , (44, 1, 13, 2, 'Canada')
      , (55, 2, 13, 1, 'Canada');
+
+insert into PLAYIN (PID, COUNTRY, MATCH_NUMBER, YELLOW_CARDS, RECEIVED_RED_CARD, DETAILED_POSITION, MINUTE_ENTERED,
+                    MINUTE_EXITED)
+values (3, 'Canada', 1, 0, false, 'Center forward', 0, 92)
+     , (1, 'Canada', 1, 2, true, 'Left wing', 0, 80)
+     , (2, 'Canada', 1, 1, true, 'Right wing', 0, 50)
+     , (4, 'Canada', 1, 0, false, 'Center mid', 0, 45)
+     , (5, 'Canada', 1, 1, false, 'Left mid', 45, 92)
+     , (6, 'Canada', 1, 0, false, 'Center back', 0, 92)
+     , (7, 'Canada', 1, 0, false, 'Full back', 0, 92)
+     , (8, 'Canada', 1, 0, false, 'Goalkeeper', 0, 92)
+     , (10, 'Spain', 1, 0, true, 'Goalkeeper', 0, 2)
+     , (11, 'Spain', 1, 1, true, 'Center forward', 0, 3)
+     , (12, 'Spain', 1, 2, true, 'Center mid', 0, 5)
+
+     , (14, 'Brazil', 2, 0, false, 'Center forward', 0, 91)
+     , (15, 'Germany', 2, 0, false, 'Center forward', 0, 91)
+     , (16, 'Germany', 2, 0, false, 'Goalkeeper', 0, 91)
+
+     , (18, 'Argentina', 3, 0, false, 'Goalkeeper', 0, 124)
+     , (17, 'Argentina', 3, 0, false, 'Center forward', 0, 124)
+     , (19, 'US', 3, 1, false, 'Center back', 0, 70)
+     , (20, 'US', 3, 0, false, 'Left mid', 70, 124)
+
+     , (21, 'Japan', 4, 0, false, 'Right mid', 0, 96)
+     , (24, 'China', 4, 1, false, 'Goalkeeper', 0, 96)
+
+     , (27, 'Ireland', 5, 0, false, 'Left wing', 0, 95)
+     , (28, 'Ireland', 5, 0, false, 'Left back', 0, 95)
+     , (26, 'Portugal', 5, 0, false, 'Right mid', 0, 95)
+
+     , (30, 'England', 6, 0, false, 'Right wing', 0, 126)
+     , (29, 'England', 6, 0, false, 'Right back', 0, 126)
+     , (31, 'Scotland', 6, 0, false, 'Center mid', 0, 126)
+
+     , (34, 'Turkey', 7, 0, false, 'Center forward', 0, 92)
+     , (35, 'Nigeria', 7, 1, false, 'Center forward', 0, 92)
+     , (36, 'Nigeria', 7, 0, false, 'Goalkeeper', 0, 92)
+
+     , (37, 'Netherlands', 8, 0, false, 'Left mid', 0, 94)
+     , (38, 'Netherlands', 8, 0, false, 'Center forward', 0, 94)
+     , (39, 'Switzerland', 8, 1, false, 'Right mid', 0, 46)
+     , (40, 'Switzerland', 8, 0, false, 'Left wing', 46, 94)
+
+     , (7, 'Canada', 9, 0, false, 'Left back', 0, 90)
+     , (4, 'Canada', 9, 0, false, 'Left mid', 0, 90)
+     , (5, 'Canada', 9, 0, false, 'Right mid', 0, 34)
+     , (9, 'Canada', 9, 0, false, 'Goalkeeper', 0, 90)
+     , (6, 'Canada', 9, 0, false, 'Goalkeeper', 34, 90)
+     , (15, 'Germany', 9, 0, false, 'Right wing', 0, 90)
+     , (16, 'Germany', 9, 0, false, 'Goalkeeper', 0, 90)
+
+     , (21, 'Japan', 10, 1, false, 'Left mid', 0, 90)
+     , (22, 'Japan', 10, 0, false, 'Left back', 0, 90)
+     , (17, 'Argentina', 10, 0, false, 'Right wing', 0, 90)
+
+     , (27, 'Ireland', 11, 0, false, 'Right wing', 0, 121)
+     , (28, 'Ireland', 11, 0, false, 'Right back', 0, 121)
+     , (30, 'England', 11, 1, false, 'Left wing', 0, 121)
+     , (29, 'England', 11, 0, false, 'Center back', 0, 121)
+
+     , (37, 'Netherlands', 12, 0, false, 'Right mid', 0, 125)
+     , (33, 'Turkey', 12, 2, true, 'Center back', 0, 125)
+
+     , (2, 'Canada', 13, 0, false, 'Center forward', 0, 95)
+     , (1, 'Canada', 13, 0, false, 'Right wing', 0, 95)
+     , (3, 'Canada', 13, 1, false, 'Left wing', 0, 95)
+     , (8, 'Canada', 13, 0, false, 'Goalkeeper', 0, 95)
+     , (21, 'Japan', 13, 0, false, 'Left mid', 0, 95)
+     , (22, 'Japan', 13, 0, false, 'Right back', 0, 95);
