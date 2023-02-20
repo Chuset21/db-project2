@@ -65,10 +65,40 @@ from CLIENT c
                     on p.EMAIL = s.EMAIL and p.PID = s.PID
                join PRICE p2 on p.MATCH_NUMBER = p2.MATCH_NUMBER
       group by c.EMAIL) t on c.EMAIL = t.EMAIL
-order by total_spend DESC;
+order by total_spend desc;
 
 
 -- Query (e) TODO
 -- Create a further SQL query that is of interest for this soccer world cup database. Maybe it uses some tables
 -- that are not used in any of the other queries, or performs some conditions on the date/time attributes of
 -- the schema or any other attributes that have not been used in one of the other queries.
+
+-- query that sees what countries got the most red cards in a game
+select red_cards.COUNTRY,
+       red_cards.c red_cards_received,
+       case
+           when red_cards.COUNTRY = m.COUNTRY1 then m.COUNTRY2
+           else m.COUNTRY1
+           end     opponent,
+       s.NAME      stadium,
+       date,
+       r.NAME      referee_name,
+       r.COUNTRY   referee_country
+from MATCH m
+         join PARTICIPATION part on m.MATCH_NUMBER = part.MATCH_NUMBER
+         join REFEREE r on part.RID = r.RID
+         join STADIUM s on m.NAME = s.NAME
+         join (select m.MATCH_NUMBER, COUNTRY, count(*) c
+               from MATCH m
+                        join PLAYIN p on m.MATCH_NUMBER = p.MATCH_NUMBER
+               where RECEIVED_RED_CARD
+               group by m.MATCH_NUMBER, COUNTRY
+               having count(*) = (select max(c)
+                                  from (select count(*) c
+                                        from MATCH m
+                                                 join PLAYIN p on m.MATCH_NUMBER = p.MATCH_NUMBER
+                                        where RECEIVED_RED_CARD
+                                        group by COUNTRY) temp)) red_cards on m.MATCH_NUMBER = red_cards.MATCH_NUMBER
+where part.ROLE_OF_REF = 'Head'
+group by red_cards.COUNTRY, red_cards.c, s.NAME, date, r.NAME, r.COUNTRY, m.COUNTRY1, m.COUNTRY2
+order by COUNTRY;
