@@ -4,12 +4,13 @@ from PLAYER
          join TEAM t on PLAYER.COUNTRY = t.COUNTRY;
 
 select *
-from playerinfo fetch first 5 rows only;
+from playerinfo
+order by name fetch first 5 rows only;
 
 select *
 from playerinfo
 where team_group = 'A'
-    fetch first 5 rows only;
+order by name fetch first 5 rows only;
 
 -- try to then insert a record into the view
 
