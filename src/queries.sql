@@ -17,10 +17,11 @@ from PLAYER p
          join PLAYIN x on p.COUNTRY = x.COUNTRY and p.PID = x.PID
 group by p.NAME, p.NUMBER, p.COUNTRY, p.PID
 having count(p.PID) = (select count(t2.COUNTRY) c
-                        from MATCH m2
-                                 join TEAM t2 on t2.COUNTRY = m2.COUNTRY1 or t2.COUNTRY = m2.COUNTRY2
-                        where p.COUNTRY = t2.COUNTRY and m2.LENGTH is not null
-                        group by t2.COUNTRY)
+                       from MATCH m2
+                                join TEAM t2 on t2.COUNTRY = m2.COUNTRY1 or t2.COUNTRY = m2.COUNTRY2
+                       where p.COUNTRY = t2.COUNTRY
+                         and m2.LENGTH is not null
+                       group by t2.COUNTRY)
 order by COUNTRY;
 
 -- Write a SQL query that lists for each team, the country, the number of matches they have played and the
@@ -46,12 +47,25 @@ from TEAM t
       group by t.COUNTRY) y on t.COUNTRY = y.COUNTRY
 order by COUNTRY;
 
--- Query (d) TODO
+-- Query (d)
 -- Create an interesting SQL query that extracts some information from tables that refers to purchasing tickets,
 -- e.g., some summary information about tickets sold for a particular match, information how many tickets
 -- where sold for a match / each match and whether the stadium was sold out, or anything else that might
 -- be interesting. The query should not only be a simple query on a single table with only basic selections
 -- and projections.
+
+-- see how much money each client has spent
+select c.NAME, c.EMAIL, t.total_spend
+from CLIENT c
+         join
+     (select c.EMAIL, sum(p2.PRICE) total_spend
+      from CLIENT c
+               join PURCHASE p on c.EMAIL = p.EMAIL
+               join SELECTED s
+                    on p.EMAIL = s.EMAIL and p.PID = s.PID
+               join PRICE p2 on p.MATCH_NUMBER = p2.MATCH_NUMBER
+      group by c.EMAIL) t on c.EMAIL = t.EMAIL
+order by total_spend DESC;
 
 
 -- Query (e) TODO
