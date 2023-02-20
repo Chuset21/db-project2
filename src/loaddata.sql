@@ -393,3 +393,53 @@ values (1, 'Eden Park')
      , (17, 'Stadium Australia')
      , (18, 'Stadium Australia')
      , (19, 'Stadium Australia');
+
+insert into PURCHASE (DATE, CREDIT_CARD, EMAIL, MATCH_NUMBER)
+values ('2023-06-14', '4643622934714755', 'joe.toe@gmail.com', 1)
+     , ('2023-06-14', '4595023766366137', 'john.gable@gmail.com', 1)
+     , ('2023-06-16', '4643622934714755', 'joe.toe@gmail.com', 2)
+     , ('2023-06-17', '4678474973058613', 'etta.jordan@gmail.com', 1)
+     , ('2023-06-17', '4654618088225172', 'lawrence.arroyo@gmail.com', 1)
+     , ('2023-06-18', '4185814201655001', 'arcangel.romo@gmail.com', 1)
+
+     , ('2023-06-18', '4984204070612866', 'edilio.rivera@gmail.com', 2)
+     , ('2023-06-18', '4580609218647335', 'raffaele.marcelo@gmail.com', 2)
+     , ('2023-06-18', '4185814201655001', 'quarto.pinto@gmail.com', 2)
+
+     , ('2023-06-19', '4834804616202023', 'amorette.michel@gmail.com', 3)
+     , ('2023-06-19', '4393930959434510', 'joe.toe@gmail.com', 3)
+
+     , ('2023-06-19', '4195550797935120', 'edilio.rivera@gmail.com', 4)
+     , ('2023-06-19', '4834804616202023', 'amorette.michel@gmail.com', 4)
+     , ('2023-06-22', '4824722849743674', 'etta.jordan@gmail.com', 4)
+
+     , ('2023-06-23', '4168476432142380', 'edilio.rivera@gmail.com', 6)
+     , ('2023-06-24', '4834804616202023', 'amorette.michel@gmail.com', 6)
+     , ('2023-06-25', '4930744315470575', 'arcangel.romo@gmail.com', 6)
+     , ('2023-06-25', '4351923157926122', 'quarto.pinto@gmail.com', 6)
+
+     , ('2023-06-25', '4958339807165630', 'lawrence.arroyo@gmail.com', 7)
+
+     , ('2023-06-25', '4470161424176298', 'john.gable@gmail.com', 9)
+     , ('2023-06-27', '4788737386339987', 'raffaele.marcelo@gmail.com', 9)
+     , ('2023-06-27', '4612952678199781', 'amorette.michel@gmail.com', 9)
+
+     , ('2023-07-21', '4643622934714755', 'joe.toe@gmail.com', 10)
+     , ('2023-07-21', '4788737386339987', 'raffaele.marcelo@gmail.com', 10)
+     , ('2023-07-21', '4612952678199781', 'amorette.michel@gmail.com', 10)
+
+     , ('2023-07-25', '4643622934714755', 'joe.toe@gmail.com', 11)
+     , ('2023-07-25', '4834804616202023', 'amorette.michel@gmail.com', 11)
+
+     , ('2023-07-28', '4643622934714755', 'arcangel.romo@gmail.com', 12)
+     , ('2023-07-28', '4834804616202023', 'raffaele.marcelo@gmail.com', 12)
+     , ('2023-07-29', '4834804616202023', 'lawrence.arroyo@gmail.com', 12)
+
+     , ('2023-07-30', '4958339807165630', 'arcangel.romo@gmail.com', 13)
+
+     , ('2023-08-06', '4643622934714755', 'joe.toe@gmail.com', 14)
+     , ('2023-08-07', '4958339807165630', 'edilio.rivera@gmail.com', 14)
+
+     , ('2023-08-07', '4834804616202023', 'lawrence.arroyo@gmail.com', 14)
+     , ('2023-08-08', '4958339807165630', 'edilio.rivera@gmail.com', 14)
+     , ('2023-08-08', '4958339807165630', 'raffaele.marcelo@gmail.com', 14);
