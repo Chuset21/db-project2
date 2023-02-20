@@ -68,7 +68,7 @@ from CLIENT c
 order by total_spend desc;
 
 
--- Query (e) TODO
+-- Query (e)
 -- Create a further SQL query that is of interest for this soccer world cup database. Maybe it uses some tables
 -- that are not used in any of the other queries, or performs some conditions on the date/time attributes of
 -- the schema or any other attributes that have not been used in one of the other queries.
