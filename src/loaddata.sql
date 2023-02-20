@@ -301,3 +301,14 @@ values (3, 'Canada', 1, 0, false, 'Center forward', 0, 92)
      , (8, 'Canada', 14, 0, false, 'Goalkeeper', 0, 95)
      , (21, 'Japan', 14, 0, false, 'Left mid', 0, 95)
      , (22, 'Japan', 14, 0, false, 'Right back', 0, 95);
+
+insert into CLIENT (EMAIL, NAME, ADDRESS, PASSWORD)
+values ('joe.toe@gmail.com', 'Joe Toe', '72 Piccadilly Circus', 'fo3nsafw*f2')
+     , ('john.gable@gmail.com', 'John K. Gable', '4534 Pritchard Court', '8ro4XP4gR9K**y')
+     , ('etta.jordan@gmail.com', 'Etta C. Jordan', '3909 Tator Patch Road', '6t8UM$jSpQeR!7')
+     , ('lawrence.arroyo@gmail.com', 'Lawrence K. Arroyo', '4337 Lynn Avenue', '*i7Lo699VbWm7H')
+     , ('arcangel.romo@gmail.com', 'Arcángel Romo Anguiano', '3797 Turnpike Drive', 'c3^f67RsGY*pMt')
+     , ('edilio.rivera@gmail.com', 'Edilio Rivera Godoy', '4738 Browning Lane', 'h%Epei6vGxjqR!')
+     , ('raffaele.marcelo@gmail.com', 'Raffaele Marcelo', '1667 Central Avenue', 'V#Dx53a*ajj**E')
+     , ('quarto.pinto@gmail.com', 'Quarto Pinto', '646 George Street', 'v#Z9kx%9igJn%Z')
+     , ('amorette.michel@gmail.com', 'Amorette Michel', '1515 Lake Forest Drive', 'f2WFBXys@r4RAG');
