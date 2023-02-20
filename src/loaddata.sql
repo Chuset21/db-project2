@@ -355,7 +355,6 @@ values ('2023-06-14', '4643622934714755', 'joe.toe@gmail.com', 1)
      , ('2023-06-16', '4643622934714755', 'joe.toe@gmail.com', 2)
      , ('2023-06-17', '4678474973058613', 'etta.jordan@gmail.com', 1)
      , ('2023-06-17', '4654618088225172', 'lawrence.arroyo@gmail.com', 1)
-     , ('2023-06-18', '4185814201655001', 'arcangel.romo@gmail.com', 1)
 
      , ('2023-06-18', '4984204070612866', 'edilio.rivera@gmail.com', 2)
      , ('2023-06-18', '4580609218647335', 'raffaele.marcelo@gmail.com', 2)
@@ -395,9 +394,9 @@ values ('2023-06-14', '4643622934714755', 'joe.toe@gmail.com', 1)
      , ('2023-08-06', '4643622934714755', 'joe.toe@gmail.com', 14)
      , ('2023-08-07', '4958339807165630', 'edilio.rivera@gmail.com', 14)
 
-     , ('2023-08-07', '4834804616202023', 'lawrence.arroyo@gmail.com', 14)
-     , ('2023-08-08', '4958339807165630', 'edilio.rivera@gmail.com', 14)
-     , ('2023-08-08', '4958339807165630', 'raffaele.marcelo@gmail.com', 14);
+     , ('2023-08-07', '4834804616202023', 'lawrence.arroyo@gmail.com', 15)
+     , ('2023-08-08', '4958339807165630', 'edilio.rivera@gmail.com', 15)
+     , ('2023-08-08', '4958339807165630', 'raffaele.marcelo@gmail.com', 15);
 
 insert into PRICE (NUMBER, NAME, MATCH_NUMBER, PRICE)
 values (1, 'Brisbane Stadium', 7, 27000)
@@ -484,3 +483,68 @@ values (1, 'Brisbane Stadium', 7, 27000)
      , (2, 'Waikatao Stadium', 13, 19500)
      , (3, 'Waikatao Stadium', 13, 17500)
      , (4, 'Waikatao Stadium', 13, 17500);
+
+insert into SELECTED (NUMBER, NAME, PID, EMAIL)
+values (1, 'Eden Park', 1, 'joe.toe@gmail.com')
+     , (2, 'Eden Park', 2, 'john.gable@gmail.com')
+     , (3, 'Eden Park', 4, 'etta.jordan@gmail.com')
+     , (4, 'Eden Park', 5, 'lawrence.arroyo@gmail.com')
+
+     , (1, 'Sydney Football Stadium', 3, 'joe.toe@gmail.com')
+     , (2, 'Sydney Football Stadium', 6, 'edilio.rivera@gmail.com')
+     , (4, 'Sydney Football Stadium', 7, 'raffaele.marcelo@gmail.com')
+     , (3, 'Sydney Football Stadium', 8, 'quarto.pinto@gmail.com')
+
+     , (1, 'Sydney Football Stadium', 9, 'amorette.michel@gmail.com')
+     , (2, 'Sydney Football Stadium', 10, 'joe.toe@gmail.com')
+     , (3, 'Sydney Football Stadium', 10, 'joe.toe@gmail.com')
+
+     , (1, 'Sydney Football Stadium', 11, 'edilio.rivera@gmail.com')
+     , (2, 'Sydney Football Stadium', 12, 'amorette.michel@gmail.com')
+     , (3, 'Sydney Football Stadium', 12, 'amorette.michel@gmail.com')
+     , (4, 'Sydney Football Stadium', 13, 'etta.jordan@gmail.com')
+
+     , (4, 'Stadium Australia', 14, 'edilio.rivera@gmail.com')
+     , (5, 'Stadium Australia', 15, 'amorette.michel@gmail.com')
+     , (6, 'Stadium Australia', 16, 'arcangel.romo@gmail.com')
+     , (1, 'Stadium Australia', 17, 'quarto.pinto@gmail.com')
+     , (2, 'Stadium Australia', 17, 'quarto.pinto@gmail.com')
+
+     , (2, 'Brisbane Stadium', 18, 'lawrence.arroyo@gmail.com')
+     , (1, 'Brisbane Stadium', 18, 'lawrence.arroyo@gmail.com')
+     , (3, 'Brisbane Stadium', 18, 'lawrence.arroyo@gmail.com')
+
+     , (1, 'Melbourne Rectangular Stadium', 19, 'john.gable@gmail.com')
+     , (2, 'Melbourne Rectangular Stadium', 19, 'john.gable@gmail.com')
+     , (3, 'Melbourne Rectangular Stadium', 20, 'raffaele.marcelo@gmail.com')
+     , (4, 'Melbourne Rectangular Stadium', 21, 'amorette.michel@gmail.com')
+
+     , (1, 'Melbourne Rectangular Stadium', 22, 'joe.toe@gmail.com')
+     , (2, 'Melbourne Rectangular Stadium', 22, 'joe.toe@gmail.com')
+     , (3, 'Melbourne Rectangular Stadium', 23, 'raffaele.marcelo@gmail.com')
+     , (4, 'Melbourne Rectangular Stadium', 24, 'amorette.michel@gmail.com')
+
+     , (1, 'Perth Rectangular Stadium', 25, 'joe.toe@gmail.com')
+     , (2, 'Perth Rectangular Stadium', 25, 'joe.toe@gmail.com')
+     , (3, 'Perth Rectangular Stadium', 26, 'amorette.michel@gmail.com')
+     , (4, 'Perth Rectangular Stadium', 26, 'amorette.michel@gmail.com')
+     , (5, 'Perth Rectangular Stadium', 26, 'amorette.michel@gmail.com')
+
+     , (1, 'Stadium Australia', 27, 'arcangel.romo@gmail.com')
+     , (2, 'Stadium Australia', 28, 'raffaele.marcelo@gmail.com')
+     , (3, 'Stadium Australia', 28, 'raffaele.marcelo@gmail.com')
+     , (5, 'Stadium Australia', 29, 'lawrence.arroyo@gmail.com')
+     , (6, 'Stadium Australia', 29, 'lawrence.arroyo@gmail.com')
+
+     , (1, 'Waikatao Stadium', 30, 'arcangel.romo@gmail.com')
+     , (2, 'Waikatao Stadium', 30, 'arcangel.romo@gmail.com')
+     , (3, 'Waikatao Stadium', 30, 'arcangel.romo@gmail.com')
+
+     , (3, 'Sydney Football Stadium', 31, 'joe.toe@gmail.com')
+     , (2, 'Sydney Football Stadium', 31, 'joe.toe@gmail.com')
+     , (1, 'Sydney Football Stadium', 32, 'edilio.rivera@gmail.com')
+
+     , (2, 'Eden Park', 33, 'lawrence.arroyo@gmail.com')
+     , (1, 'Eden Park', 34, 'edilio.rivera@gmail.com')
+     , (3, 'Eden Park', 35, 'raffaele.marcelo@gmail.com')
+     , (4, 'Eden Park', 35, 'raffaele.marcelo@gmail.com');
