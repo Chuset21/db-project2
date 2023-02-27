@@ -125,7 +125,8 @@ values (92, 'Group stage', '2023-07-20', '19:00:00', 'Eden Park', 'Canada', 'Spa
      , (121, 'Round of 16', '2023-08-06', '19:00:00', 'Stadium Australia', 'Ireland', 'England')
      , (125, 'Round of 16', '2023-08-06', '20:00:00', 'Waikatao Stadium', 'Turkey', 'Netherlands')
      , (95, 'Quarterfinals', '2023-08-11', '14:00:00', 'Sydney Football Stadium', 'Canada', 'Japan')
-     , (null, 'Quarterfinals', '2023-08-12', '16:30:00', 'Eden Park', 'Ireland', 'Netherlands');
+     , (null, 'Quarterfinals', '2023-08-12', '16:30:00', 'Eden Park', 'Ireland', 'Netherlands')
+     , (null, 'Final', '2023-08-16', '16:30:00', 'Stadium Australia', 'Canada', null);
 
 insert into PARTICIPATION (RID, MATCH_NUMBER, ROLE_OF_REF)
 values (1, 1, 'Head')
@@ -295,12 +296,8 @@ values (3, 'Canada', 1, 0, false, 'Center forward', 0, 92)
      , (37, 'Netherlands', 13, 0, false, 'Right mid', 0, 125)
      , (33, 'Turkey', 13, 2, true, 'Center back', 0, 125)
 
-     , (2, 'Canada', 14, 0, false, 'Center forward', 0, 95)
-     , (1, 'Canada', 14, 0, false, 'Right wing', 0, 95)
-     , (3, 'Canada', 14, 1, false, 'Left wing', 0, 95)
-     , (8, 'Canada', 14, 0, false, 'Goalkeeper', 0, 95)
-     , (21, 'Japan', 14, 0, false, 'Left mid', 0, 95)
-     , (22, 'Japan', 14, 0, false, 'Right back', 0, 95);
+     , (2, 'Canada', 14, 0, false, 'Center forward', 0, null)
+     , (1, 'Canada', 14, 0, false, 'Right wing', 0, null);
 
 insert into CLIENT (EMAIL, NAME, ADDRESS, PASSWORD)
 values ('joe.toe@gmail.com', 'Joe Toe', '72 Piccadilly Circus', 'fo3nsafw*f2')
