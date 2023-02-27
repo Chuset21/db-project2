@@ -111,22 +111,22 @@ values ('Auckland Tamaki Makaurau, NZL', 'Eden Park', 50000)
      , ('Sydney Gadigal, AUS', 'Stadium Australia', 83500);
 
 insert into MATCH (LENGTH, ROUND, DATE, TIME, NAME, COUNTRY1, COUNTRY2)
-values (92, 'Group stage', '2023-07-20', '19:00:00', 'Eden Park', 'Canada', 'Spain')
-     , (90, 'Group stage', '2023-07-21', '08:30:00', 'Sydney Football Stadium', 'Canada', 'Italy')
-     , (91, 'Group stage', '2023-07-21', '13:00:00', 'Sydney Football Stadium', 'Brazil', 'Germany')
-     , (124, 'Group stage', '2023-07-23', '17:00:00', 'Sydney Football Stadium', 'Argentina', 'US')
-     , (96, 'Group stage', '2023-07-25', '12:00:00', 'Perth Rectangular Stadium', 'Japan', 'China')
-     , (95, 'Group stage', '2023-07-26', '20:00:00', 'Stadium Australia', 'Ireland', 'Portugal')
-     , (126, 'Group stage', '2023-07-28', '18:30:00', 'Brisbane Stadium', 'England', 'Scotland')
-     , (92, 'Group stage', '2023-07-29', '20:30:00', 'Waikatao Stadium', 'Turkey', 'Nigeria')
-     , (94, 'Group stage', '2023-07-30', '14:00:00', 'Melbourne Rectangular Stadium', 'Netherlands', 'Switzerland')
-     , (90, 'Round of 16', '2023-08-05', '17:00:00', 'Melbourne Rectangular Stadium', 'Canada', 'Germany')
-     , (90, 'Round of 16', '2023-08-06', '17:30:00', 'Perth Rectangular Stadium', 'Argentina', 'Japan')
-     , (121, 'Round of 16', '2023-08-06', '19:00:00', 'Stadium Australia', 'Ireland', 'England')
-     , (125, 'Round of 16', '2023-08-06', '20:00:00', 'Waikatao Stadium', 'Turkey', 'Netherlands')
-     , (95, 'Quarterfinals', '2023-08-11', '14:00:00', 'Sydney Football Stadium', 'Canada', 'Japan')
-     , (null, 'Quarterfinals', '2023-08-12', '16:30:00', 'Eden Park', 'Ireland', 'Netherlands')
-     , (null, 'Final', '2023-08-16', '16:30:00', 'Stadium Australia', 'Canada', null);
+values (92, 'Group stage', '2023-02-18', '19:00:00', 'Eden Park', 'Canada', 'Spain')
+     , (90, 'Group stage', '2023-02-19', '08:30:00', 'Sydney Football Stadium', 'Canada', 'Italy')
+     , (91, 'Group stage', '2023-02-20', '13:00:00', 'Sydney Football Stadium', 'Brazil', 'Germany')
+     , (124, 'Group stage', '2023-02-20', '17:00:00', 'Sydney Football Stadium', 'Argentina', 'US')
+     , (96, 'Group stage', '2023-02-21', '12:00:00', 'Perth Rectangular Stadium', 'Japan', 'China')
+     , (95, 'Group stage', '2023-02-22', '20:00:00', 'Stadium Australia', 'Ireland', 'Portugal')
+     , (126, 'Group stage', '2023-02-23', '18:30:00', 'Brisbane Stadium', 'England', 'Scotland')
+     , (92, 'Group stage', '2023-02-23', '20:30:00', 'Waikatao Stadium', 'Turkey', 'Nigeria')
+     , (94, 'Group stage', '2023-02-24', '14:00:00', 'Melbourne Rectangular Stadium', 'Netherlands', 'Switzerland')
+     , (90, 'Round of 16', '2023-02-24', '17:00:00', 'Melbourne Rectangular Stadium', 'Canada', 'Germany')
+     , (90, 'Round of 16', '2023-02-25', '17:30:00', 'Perth Rectangular Stadium', 'Argentina', 'Japan')
+     , (121, 'Round of 16', '2023-02-26', '19:00:00', 'Stadium Australia', 'Ireland', 'England')
+     , (125, 'Round of 16', '2023-02-28', '20:00:00', 'Waikatao Stadium', 'Turkey', 'Netherlands')
+     , (null, 'Quarterfinals', '2023-03-01', '14:00:00', 'Sydney Football Stadium', 'Canada', 'Japan')
+     , (null, 'Quarterfinals', '2023-03-02', '16:30:00', 'Eden Park', 'Ireland', 'Netherlands')
+     , (null, 'Final', '2023-03-03', '16:30:00', 'Stadium Australia', null, null);
 
 insert into PARTICIPATION (RID, MATCH_NUMBER, ROLE_OF_REF)
 values (1, 1, 'Head')
@@ -222,10 +222,7 @@ values (15, 1, 1, 3, 'Canada')
      , (null, 12, 12, 27, 'Ireland')
      , (null, 13, 12, 28, 'Ireland')
 
-     , (null, 1, 13, 37, 'Netherlands')
-
-     , (44, 1, 14, 2, 'Canada')
-     , (55, 2, 14, 1, 'Canada');
+     , (null, 1, 13, 37, 'Netherlands');
 
 insert into PLAYIN (PID, COUNTRY, MATCH_NUMBER, YELLOW_CARDS, RECEIVED_RED_CARD, DETAILED_POSITION, MINUTE_ENTERED,
                     MINUTE_EXITED)
@@ -347,53 +344,53 @@ values (1, 'Eden Park')
      , (7, 'Stadium Australia');
 
 insert into PURCHASE (DATE, CREDIT_CARD, EMAIL, MATCH_NUMBER)
-values ('2023-06-14', '4643622934714755', 'joe.toe@gmail.com', 1)
-     , ('2023-06-14', '4595023766366137', 'john.gable@gmail.com', 1)
-     , ('2023-06-16', '4643622934714755', 'joe.toe@gmail.com', 2)
-     , ('2023-06-17', '4678474973058613', 'etta.jordan@gmail.com', 1)
-     , ('2023-06-17', '4654618088225172', 'lawrence.arroyo@gmail.com', 1)
+values ('2023-01-14', '4643622934714755', 'joe.toe@gmail.com', 1)
+     , ('2023-01-14', '4595023766366137', 'john.gable@gmail.com', 1)
+     , ('2023-01-16', '4643622934714755', 'joe.toe@gmail.com', 2)
+     , ('2023-01-17', '4678474973058613', 'etta.jordan@gmail.com', 1)
+     , ('2023-01-17', '4654618088225172', 'lawrence.arroyo@gmail.com', 1)
 
-     , ('2023-06-18', '4984204070612866', 'edilio.rivera@gmail.com', 2)
-     , ('2023-06-18', '4580609218647335', 'raffaele.marcelo@gmail.com', 2)
-     , ('2023-06-18', '4185814201655001', 'quarto.pinto@gmail.com', 2)
+     , ('2023-01-18', '4984204070612866', 'edilio.rivera@gmail.com', 2)
+     , ('2023-01-18', '4580609218647335', 'raffaele.marcelo@gmail.com', 2)
+     , ('2023-01-18', '4185814201655001', 'quarto.pinto@gmail.com', 2)
 
-     , ('2023-06-19', '4834804616202023', 'amorette.michel@gmail.com', 3)
-     , ('2023-06-19', '4393930959434510', 'joe.toe@gmail.com', 3)
+     , ('2023-01-19', '4834804616202023', 'amorette.michel@gmail.com', 3)
+     , ('2023-01-19', '4393930959434510', 'joe.toe@gmail.com', 3)
 
-     , ('2023-06-19', '4195550797935120', 'edilio.rivera@gmail.com', 4)
-     , ('2023-06-19', '4834804616202023', 'amorette.michel@gmail.com', 4)
-     , ('2023-06-22', '4824722849743674', 'etta.jordan@gmail.com', 4)
+     , ('2023-01-19', '4195550797935120', 'edilio.rivera@gmail.com', 4)
+     , ('2023-01-19', '4834804616202023', 'amorette.michel@gmail.com', 4)
+     , ('2023-01-22', '4824722849743674', 'etta.jordan@gmail.com', 4)
 
-     , ('2023-06-23', '4168476432142380', 'edilio.rivera@gmail.com', 6)
-     , ('2023-06-24', '4834804616202023', 'amorette.michel@gmail.com', 6)
-     , ('2023-06-25', '4930744315470575', 'arcangel.romo@gmail.com', 6)
-     , ('2023-06-25', '4351923157926122', 'quarto.pinto@gmail.com', 6)
+     , ('2023-01-23', '4168476432142380', 'edilio.rivera@gmail.com', 6)
+     , ('2023-01-24', '4834804616202023', 'amorette.michel@gmail.com', 6)
+     , ('2023-01-25', '4930744315470575', 'arcangel.romo@gmail.com', 6)
+     , ('2023-01-25', '4351923157926122', 'quarto.pinto@gmail.com', 6)
 
-     , ('2023-06-25', '4958339807165630', 'lawrence.arroyo@gmail.com', 7)
+     , ('2023-01-25', '4958339807165630', 'lawrence.arroyo@gmail.com', 7)
 
-     , ('2023-06-25', '4470161424176298', 'john.gable@gmail.com', 9)
-     , ('2023-06-27', '4788737386339987', 'raffaele.marcelo@gmail.com', 9)
-     , ('2023-06-27', '4612952678199781', 'amorette.michel@gmail.com', 9)
+     , ('2023-01-25', '4470161424176298', 'john.gable@gmail.com', 9)
+     , ('2023-01-27', '4788737386339987', 'raffaele.marcelo@gmail.com', 9)
+     , ('2023-01-27', '4612952678199781', 'amorette.michel@gmail.com', 9)
 
-     , ('2023-07-21', '4643622934714755', 'joe.toe@gmail.com', 10)
-     , ('2023-07-21', '4788737386339987', 'raffaele.marcelo@gmail.com', 10)
-     , ('2023-07-21', '4612952678199781', 'amorette.michel@gmail.com', 10)
+     , ('2023-02-21', '4643622934714755', 'joe.toe@gmail.com', 10)
+     , ('2023-02-21', '4788737386339987', 'raffaele.marcelo@gmail.com', 10)
+     , ('2023-02-21', '4612952678199781', 'amorette.michel@gmail.com', 10)
 
-     , ('2023-07-25', '4643622934714755', 'joe.toe@gmail.com', 11)
-     , ('2023-07-25', '4834804616202023', 'amorette.michel@gmail.com', 11)
+     , ('2023-02-21', '4643622934714755', 'joe.toe@gmail.com', 11)
+     , ('2023-02-22', '4834804616202023', 'amorette.michel@gmail.com', 11)
 
-     , ('2023-07-28', '4643622934714755', 'arcangel.romo@gmail.com', 12)
-     , ('2023-07-28', '4834804616202023', 'raffaele.marcelo@gmail.com', 12)
-     , ('2023-07-29', '4834804616202023', 'lawrence.arroyo@gmail.com', 12)
+     , ('2023-02-23', '4643622934714755', 'arcangel.romo@gmail.com', 12)
+     , ('2023-02-23', '4834804616202023', 'raffaele.marcelo@gmail.com', 12)
+     , ('2023-02-24', '4834804616202023', 'lawrence.arroyo@gmail.com', 12)
 
-     , ('2023-07-30', '4958339807165630', 'arcangel.romo@gmail.com', 13)
+     , ('2023-02-26', '4958339807165630', 'arcangel.romo@gmail.com', 13)
 
-     , ('2023-08-06', '4643622934714755', 'joe.toe@gmail.com', 14)
-     , ('2023-08-07', '4958339807165630', 'edilio.rivera@gmail.com', 14)
+     , ('2023-02-27', '4643622934714755', 'joe.toe@gmail.com', 14)
+     , ('2023-02-27', '4958339807165630', 'edilio.rivera@gmail.com', 14)
 
-     , ('2023-08-07', '4834804616202023', 'lawrence.arroyo@gmail.com', 15)
-     , ('2023-08-08', '4958339807165630', 'edilio.rivera@gmail.com', 15)
-     , ('2023-08-08', '4958339807165630', 'raffaele.marcelo@gmail.com', 15);
+     , ('2023-02-28', '4834804616202023', 'lawrence.arroyo@gmail.com', 15)
+     , ('2023-02-28', '4958339807165630', 'edilio.rivera@gmail.com', 15)
+     , ('2023-02-28', '4958339807165630', 'raffaele.marcelo@gmail.com', 15);
 
 insert into PRICE (NUMBER, NAME, MATCH_NUMBER, PRICE)
 values (1, 'Brisbane Stadium', 7, 27000)
